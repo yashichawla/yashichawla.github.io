@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html color-mode="light" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yashi Chawla</title>
+    <script>
+      if (
+        localStorage.getItem("color-mode") === "dark" ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+          !localStorage.getItem("color-mode"))
+      ) {
+        document.documentElement.setAttribute("color-mode", "dark");
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="icon" href="assets/png/avatar.png">
+  </head>
+  <body>
+    <div id="container">
+
+      <!-- Dark Mode Toggle  -->
+      <div class="color-mode-toggle">
+        <button class="color-mode-btn light--hidden" aria-label="Toggle light mode">
+          <svg class="icon-sun">
+            <use xlink:href="assets/svg/svg-defs.svg#sun"></use>
+          </svg>
+        </button>
+        <button class="color-mode-btn dark--hidden" aria-label="Toggle dark mode">
+          <svg class="icon-moon">
+            <use xlink:href="assets/svg/svg-defs.svg#moon"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 
+        Name Block
+        -->
+      <div id="name-block">Yashi Chawla</div>
+
+      <!-- 
+        Navigation Block
+        -->
+      <div id="nav-block">
+
+        <!-- Additional nav links go here -->
+        <span id="projects" class="nav-selected"> Projects. </span>
+        <span id="Email">
+            <a href="https://mailto:yashichawla1@gmail.com">
+              Email
+            </a>
+          </span>
+        <span id="Resume">
+            <a href="https://goto-link.herokuapp.com/yashi-resume">
+              Resume
+            </a>
+          </span>
+        <span id="Contact Me">
+            <a href="https://bio.link/yashichawla">
+              Contact Me
+            </a>
+          </span>
+      </div>
+
+      <!-- 
+        Profile Block
+        -->
+      <div id="pf-img-container">
+        <img id="pf-img-source" src="assets/png/avatar.png" alt="Profile Avatar">
+        <img id="pf-img-shadow" src="assets/png/avatar.png" alt="">
+      </div>
+      <div id="pf-info-container">
+        <div id="pf-info-bio">
+
+          <!-- Github bio goes here  -->
+        </div>
+        <div id="pf-info-links">
+          <div id="pf-info-github">
+            <svg class="pf-info-icon icon-f">
+              <use xlink:href="assets/svg/svg-defs.svg#github"></use>
+            </svg>
+            <a target="_blank" href="https://github.com/Yashi-Chawla">
+              <span>Yashi-Chawla</span>
+            </a>
+          </div>
+          <div id="pf-info-location">
+            <svg class="pf-info-icon icon-f">
+              <use xlink:href="assets/svg/svg-defs.svg#map-pin"></use>
+            </svg>
+            <span>Bangalore</span>
+          </div>
+          <div id="pf-info-linkedin">
+            <svg class="pf-info-icon icon-f">
+              <use xlink:href="assets/svg/svg-defs.svg#linkedin"></use>
+            </svg>
+            <a target="_blank" href="https://www.linkedin.com/in/yashi-chawla/">
+              <span>Yashi Chawla</span>
+            </a>
+          </div>
+          <div id="pf-info-twitter">
+            <svg class="pf-info-icon icon-f">
+              <use xlink:href="assets/svg/svg-defs.svg#twitter"></use>
+            </svg>
+            <a target="_blank" href="https://twitter.com/YashiChawla">
+              <span>YashiChawla</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repository Block -->
+      <div id="repo-block">
+        <div id="readme"></div>
+        <div id="repo-grid" class="grid">
+
+          <!-- repository cards go here -->
+          <div class="grid-item">
+            <div class="repo-lang"><span>Jupyter Notebook</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/QA_SQuAD">
+                <span class="repo-title">
+                  QA_SQuAD
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>2</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>2</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>MATLAB</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/AutomatedCarParkingDetection">
+                <span class="repo-title">
+                  AutomatedCarParkingDetection
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Less</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/sButtons/sbuttons">
+                <span class="repo-title">
+                  sbuttons
+                </span>
+                <span class="repo-desc">
+                :bulb: Simple buttons you can use easily for your next project.</span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>319</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>548</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>JavaScript</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/VarunMK/LifePlanner">
+                <span class="repo-title">
+                  LifePlanner
+                </span>
+                <span class="repo-desc">
+                Web Dev Project. Life Planner</span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>1</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/awesome-resources">
+                <span class="repo-title">
+                  <svg class="icon-fork"><use xlink:href="assets/svg/svg-defs.svg#fork"></use></svg>
+                  awesome-resources
+                </span>
+                <span class="repo-desc">
+                :sunglasses: List of helpful resources added by the community for the community!</span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>HTML</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/sbuttons">
+                <span class="repo-title">
+                  <svg class="icon-fork"><use xlink:href="assets/svg/svg-defs.svg#fork"></use></svg>
+                  sbuttons
+                </span>
+                <span class="repo-desc">
+                Simple buttons you can use easily for your next project.</span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>C</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/ioproject">
+                <span class="repo-title">
+                  ioproject
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>2</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>C</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/DataStructuresAssignment">
+                <span class="repo-title">
+                  DataStructuresAssignment
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>JavaScript</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/LifePlanner">
+                <span class="repo-title">
+                  <svg class="icon-fork"><use xlink:href="assets/svg/svg-defs.svg#fork"></use></svg>
+                  LifePlanner
+                </span>
+                <span class="repo-desc">
+                Web Dev Project. Life Planner</span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Jupyter Notebook</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/Cancer_Data_Analytics">
+                <span class="repo-title">
+                  <svg class="icon-fork"><use xlink:href="assets/svg/svg-defs.svg#fork"></use></svg>
+                  Cancer_Data_Analytics
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/Computer-Networks-UE19CS255">
+                <span class="repo-title">
+                  Computer-Networks-UE19CS255
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Verilog</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/DDCO-Lab-UE19CS206">
+                <span class="repo-title">
+                  DDCO-Lab-UE19CS206
+                </span>
+                <span class="repo-desc">
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+
+    <!-- Built using Portfolio (https://github.com/shaansubbaiah/Portfolio) -->
+  </body>
+</html>
