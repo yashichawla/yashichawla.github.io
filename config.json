@@ -1,0 +1,25 @@
+{
+	"username": "Yashi-Chawla",
+	"repos": "17",
+	"avatar": null,
+	"linkedinURL": "https://www.linkedin.com/in/yashi-chawla/",
+	"twitterId": "YashiChawla",
+	"gitlabId": null,
+	"navLinks": [
+		{
+			"name": "Email",
+			"link": "mailto:yashichawla1@gmail.com"
+		},
+		{
+			"name": "Resume",
+			"link": "https://goto-link.herokuapp.com/yashi-resume"
+		},
+		{
+			"name": "Contact Me",
+			"link": "https://bio.link/yashichawla"
+		}
+	],
+	"infoLinks": [],
+	"socialPreviewImage": "enabled",
+	"profileREADME": "disabled"
+}
