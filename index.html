@@ -13,11 +13,12 @@
       }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <link rel="icon" href="assets/png/avatar.png">
+    <link rel="icon" href="assets/images/avatar.webp">
+    <meta name="description" content="Yashi Chawla's portfolio website showcasing GitHub projects.">
   </head>
   <body>
     <div id="container">
@@ -49,7 +50,7 @@
         <!-- Additional nav links go here -->
         <span id="projects" class="nav-selected"> Projects </span>
         <span id="Email">
-            <a href="mailto:yashichawla1@gmail.com">
+            <a href="https://mailto:yashichawla1@gmail.com">
               Email
             </a>
           </span>
@@ -69,8 +70,8 @@
         Profile Block
         -->
       <div id="pf-img-container">
-        <img id="pf-img-source" src="assets/png/avatar.png" alt="Profile Avatar">
-        <img id="pf-img-shadow" src="assets/png/avatar.png" alt="">
+        <img id="pf-img-source" src="assets/images/avatar.webp" alt="Profile Avatar">
+        <img id="pf-img-shadow" src="assets/images/avatar.webp" alt="">
       </div>
       <div id="pf-info-container">
         <div id="pf-info-bio">
@@ -121,19 +122,42 @@
 
       <!-- Repository Block -->
       <div id="repo-block">
-        <div id="readme"></div>
         <div id="repo-grid" class="grid">
 
           <!-- repository cards go here -->
           <div class="grid-item">
-            <div class="repo-lang"><span>Jupyter Notebook</span></div>
+            <div class="repo-lang"><span>Java</span></div>
             <div class="repo-about">
-              <a href="https://github.com/Yashi-Chawla/Cancer_Data_Analytics">
+              <a href="https://github.com/Yashi-Chawla/coffee">
                 <span class="repo-title">
-                  mammogram-analysis
+                  coffee
                 </span>
                 <span class="repo-desc">
-                Analysis of mammogram data to draw insights and classify tumors as malignant or benign</span>
+                A version control system built using Java and DropBox API.
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>2</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Jupyter Notebook</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/SCDV">
+                <span class="repo-title">
+                  SCDV
+                </span>
+                <span class="repo-desc">
+                Implementation of SCDV: Sparse Composite Document Vectors using soft clustering over distributional representations
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -155,7 +179,8 @@
                   YAH
                 </span>
                 <span class="repo-desc">
-                A mini-Hadoop clone capable of performing all DFS functionalities through a CLI</span>
+                A mini-Hadoop clone capable of performing all DFS functionalities through a CLI
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -172,12 +197,36 @@
           <div class="grid-item">
             <div class="repo-lang"><span>Jupyter Notebook</span></div>
             <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/Cancer_Data_Analytics">
+                <span class="repo-title">
+                  Cancer_Data_Analytics
+                </span>
+                <span class="repo-desc">
+                Analysis of mammogram data to draw insights and classify tumors as malignant or benign
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Jupyter Notebook</span></div>
+            <div class="repo-about">
               <a href="https://github.com/Yashi-Chawla/QA_SQuAD">
                 <span class="repo-title">
                   QA_SQuAD
                 </span>
                 <span class="repo-desc">
-                A closed-domain question answering system built on the SQuAD 1.1 dataset</span>
+                A closed-domain question answering system built on the SQuAD 1.1 dataset
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -199,7 +248,8 @@
                   AutomatedCarParkingDetection
                 </span>
                 <span class="repo-desc">
-                Automated parking spot detection system using Computer Vision</span>
+                Automated parking spot detection system using Computer Vision
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -214,6 +264,52 @@
             </div>
           </div>
           <div class="grid-item">
+            <div class="repo-lang"><span>Python</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/CD-Project-UE19CS351">
+                <span class="repo-title">
+                  CD-Project-UE19CS351
+                </span>
+                <span class="repo-desc">
+                This project was made as a part of the Compiler Design course (UE19CS351) at PES University.
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>HTML</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/Yashi-Chawla.github.io">
+                <span class="repo-title">
+                  Yashi-Chawla.github.io
+                </span>
+                <span class="repo-desc">
+                Portfolio Website
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>1</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
             <div class="repo-about">
               <a href="https://github.com/Yashi-Chawla/awesome-resources">
                 <span class="repo-title">
@@ -221,7 +317,8 @@
                   awesome-resources
                 </span>
                 <span class="repo-desc">
-                :sunglasses: List of helpful resources added by the community for the community!</span>
+                :sunglasses: List of helpful resources added by the community for the community!
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -244,7 +341,8 @@
                   sbuttons
                 </span>
                 <span class="repo-desc">
-                Simple buttons you can use easily for your next project.</span>
+                Simple buttons you can use easily for your next project.
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -266,7 +364,8 @@
                   ioproject
                 </span>
                 <span class="repo-desc">
-                Restaurant Management System implemented using Stacks and Queues</span>
+                Restaurant Management System implemented using Stacks and Queues
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -288,7 +387,8 @@
                   DataStructuresAssignment
                 </span>
                 <span class="repo-desc">
-                This repository contains submissions made as a part of the Data Structures IO course at PES University</span>
+                This repository contains submissions made as a part of the Data Structures IO course at PES University
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -303,14 +403,38 @@
             </div>
           </div>
           <div class="grid-item">
-            <div class="repo-lang"><span>PLpgSQL</span></div>
+            <div class="repo-lang"><span>Jupyter Notebook</span></div>
             <div class="repo-about">
-              <a href="https://github.com/Yashi-Chawla/DBMS-Lab-UE19CS304">
+              <a href="https://github.com/Yashi-Chawla/AIR-UE19CS332">
                 <span class="repo-title">
-                  DBMS-Lab-UE19CS304
+                  AIR-UE19CS332
                 </span>
                 <span class="repo-desc">
-                A repository containing the submissions part of the Database Management System Lab course (UE19CS304) at PES University.</span>
+                A repository containing the submissions part of the Algorithms for Intelligence Web and Information Retrieval course (UE19CS332) at PES University.
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Yacc</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/CD-UE19CS531">
+                <span class="repo-title">
+                  CD-UE19CS531
+                </span>
+                <span class="repo-desc">
+                A repository containing the submissions part of the Compiler Design course (UE19CS351) at PES University.
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -327,12 +451,13 @@
           <div class="grid-item">
             <div class="repo-lang"><span>Python</span></div>
             <div class="repo-about">
-              <a href="https://github.com/Yashi-Chawla/MI-Lab">
+              <a href="https://github.com/Yashi-Chawla/CC-UE19CS352">
                 <span class="repo-title">
-                  MI-Lab
+                  CC-UE19CS352
                 </span>
                 <span class="repo-desc">
-                A repository containing the submissions part of the Machine Intelligence Lab course (UE19CS305) at PES University.</span>
+                A repository containing the submissions part of the Cloud Computing course (UE19CS352) at PES University.
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -347,14 +472,61 @@
             </div>
           </div>
           <div class="grid-item">
-            <div class="repo-lang"><span>HTML</span></div>
+            <div class="repo-lang"><span>Java</span></div>
             <div class="repo-about">
-              <a href="https://github.com/Yashi-Chawla/Yashi-Chawla.github.io">
+              <a href="https://github.com/Yashi-Chawla/OOAD-UE19CS353">
                 <span class="repo-title">
-                  Yashi-Chawla.github.io
+                  OOAD-UE19CS353
                 </span>
                 <span class="repo-desc">
-                Portfolio Website</span>
+                A repository containing the submissions part of the Object Oriented Analysis and Design with Java course (UE19CS353) at PES University.
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>PLpgSQL</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/DBMS-Lab-UE19CS304">
+                <span class="repo-title">
+                  DBMS-Lab-UE19CS304
+                </span>
+                <span class="repo-desc">
+                A repository containing the submissions part of the Database Management System Lab course (UE19CS304) at PES University.
+                </span>
+              </a>
+            </div>
+            <div class="repo-stats">
+              <svg class="icon-star">
+                <use xlink:href="assets/svg/svg-defs.svg#star"></use>
+              </svg>
+              <span>0</span>
+              <svg class="icon-fork">
+                <use xlink:href="assets/svg/svg-defs.svg#fork"></use>
+              </svg>
+              <span>0</span>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="repo-lang"><span>Python</span></div>
+            <div class="repo-about">
+              <a href="https://github.com/Yashi-Chawla/MI-Lab-UE19CS305">
+                <span class="repo-title">
+                  MI-Lab-UE19CS305
+                </span>
+                <span class="repo-desc">
+                A repository containing the submissions part of the Machine Intelligence Lab course (UE19CS305) at PES University.
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -377,7 +549,8 @@
                   LifePlanner
                 </span>
                 <span class="repo-desc">
-                A full-stack based application to manage time and activities</span>
+                A full-stack based application to manage time and activities
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -399,7 +572,8 @@
                   shopper
                 </span>
                 <span class="repo-desc">
-                An online shopping management system made using SQL and Python</span>
+                An online shopping management system made using SQL and Python
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -421,7 +595,8 @@
                   Big-Data-Assignments-UE19CS322
                 </span>
                 <span class="repo-desc">
-                A repository containing the assignments done as a part of the Big Data course (UE19CS322) at PES University</span>
+                A repository containing the assignments done as a part of the Big Data course (UE19CS322) at PES University
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -442,7 +617,8 @@
                   Computer-Networks-UE19CS255
                 </span>
                 <span class="repo-desc">
-                A repository containing the submissions made as a part of the Computer Networks Laboratory course (UE19CS255) at PES University</span>
+                A repository containing the submissions made as a part of the Computer Networks Laboratory course (UE19CS255) at PES University
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -464,7 +640,8 @@
                   DDCO-Lab-UE19CS206
                 </span>
                 <span class="repo-desc">
-                A repository containing the submissions made as a part of the Digital Design and Computer Organization Laboratory course (UE19CS206) at PES University</span>
+                A repository containing the submissions made as a part of the Digital Design and Computer Organization Laboratory course (UE19CS206) at PES University
+                </span>
               </a>
             </div>
             <div class="repo-stats">
@@ -486,7 +663,8 @@
                   guessColor
                 </span>
                 <span class="repo-desc">
-                A simple colour guessing game made using HTML/CSS and JavaScript</span>
+                A simple colour guessing game made using HTML/CSS and JavaScript
+                </span>
               </a>
             </div>
             <div class="repo-stats">
